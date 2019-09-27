@@ -22,6 +22,7 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 		{"sub", m_sub},
 		{"mul", m_mul},
 		{"div", m_div},
+		{"mod", m_mod},
 	};
 	for (i = 0; valid_ops[i].opcode != NULL; i++)
 	{
