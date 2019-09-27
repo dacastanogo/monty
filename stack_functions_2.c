@@ -13,7 +13,7 @@ void m_swap(stack_t **stack, unsigned int line_number)
 
 	if (var.stack_len < 2)
 	{
-		dprintf(STDOUT_FILENO,
+		fprintf(stderr,
 			"L%u: can't swap, stack too short\n",
 			line_number);
 		exit(EXIT_FAILURE);
@@ -33,8 +33,6 @@ void m_swap(stack_t **stack, unsigned int line_number)
 	*stack = next;
 }
 
-#include "monty.h"
-
 /**
  * m_add - add the top two elements of the stack
  * @stack: double pointer tot he beginning of the stack
@@ -48,7 +46,7 @@ void m_add(stack_t **stack, unsigned int line_number)
 
 	if (var.stack_len < 2)
 	{
-		dprintf(STDOUT_FILENO,
+		fprintf(stderr,
 			"L%u: can't add, stack too short\n",
 			line_number);
 		exit(EXIT_FAILURE);
