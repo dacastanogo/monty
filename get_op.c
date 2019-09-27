@@ -20,9 +20,9 @@ void get_op(char *op, stack_t **stack, unsigned int line_number)
 		{"add", m_add},
 		{"nop", m_nop},
 		{"sub", m_sub},
-		{NULL, NULL}
+		{"mul", m_mul},
+		{"div", m_div},
 	};
-
 	for (i = 0; valid_ops[i].opcode != NULL; i++)
 	{
 		if (strcmp(valid_ops[i].opcode, op) == 0)
