@@ -54,8 +54,7 @@ typedef struct var_s
 
 /* global struct to hold flag for queue and stack length */
 extern var_t var;
-
-static int check_for_digit(char *arg);
+void get_op(char *op, stack_t **stack, unsigned int line_number);
 void m_push(stack_t **stack, unsigned int line_number);
 void m_pall(stack_t **stack, unsigned int line_number);
 void m_pint(stack_t **stack, unsigned int line_number);
@@ -66,4 +65,5 @@ void m_nop(stack_t **stack, unsigned int line_number);
 void free_stack(int status, void *arg);
 void free_lineptr(int status, void *arg);
 void m_fs_close(int status, void *arg);
+stack_t *add_node(stack_t **stack, const int n);
 #endif
